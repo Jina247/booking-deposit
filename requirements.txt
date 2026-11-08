@@ -1,6 +1,6 @@
-fastapi
-uvicorn
-sqlmodel
-httpx
-base58
-pytest
+fastapi==0.162.2
+uvicorn==0.54.0
+sqlmodel==0.0.48
+httpx==0.28.1
+base58==2.1.1
+pytest==9.2.0

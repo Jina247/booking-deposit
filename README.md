@@ -27,7 +27,7 @@ cent and it settles in about a second.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install fastapi uvicorn sqlmodel httpx base58 pytest
+pip install -r requirements.txt   # tested with Python 3.14
 
 # Demo without a wallet (fake payments):
 MOCK_PAYMENTS=1 MERCHANT_WALLET=11111111111111111111111111111111 OWNER_KEY=secret \
