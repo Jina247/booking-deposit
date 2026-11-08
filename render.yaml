@@ -1,0 +1,18 @@
+# Public demo on Render (free plan). Runs in mock-payment mode so anyone can try it
+# without a wallet. Owner key for the demo is "demo".
+services:
+  - type: web
+    name: booking-deposit-demo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.6
+      - key: MOCK_PAYMENTS
+        value: "1"
+      - key: MERCHANT_WALLET
+        value: "11111111111111111111111111111111"
+      - key: OWNER_KEY
+        value: demo
